@@ -1,5 +1,6 @@
 html { overflow-y: scroll; }
 
 body { background-color: #afeeee;
-        text-align:center
+        text-align:center;
       }
+#gohome { text-align:right; }
