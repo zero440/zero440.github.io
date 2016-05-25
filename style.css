@@ -1,6 +1,5 @@
-html { overflow-y: scroll; }
+body { background-image: url(picture/bg.png) ;}
 
-body { background-color: #afeeee;
-        text-align:center;
-      }
-#gohome { text-align:right; }
+img#laguna { width: 300px;
+             height: 300px;
+           }
