@@ -1,5 +1,33 @@
-body { background-image: url(picture/bg.png) ;}
+body { background-image: url(picture/bg.png) ;
+       text-align: center;
+     }
 
 img#laguna { width: 300px;
              height: 300px;
            }
+
+img { -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+    }/*
+    　　　ブラウザ毎の拡張機能明示（ベンダープレフィックス)
+        webkit  Chrome Safari用
+        moz FireFox用
+        o Opera用
+     */
+img:hover { border-radius: 50%; }
+
+ul { list-style: url(picture/icon.png);
+     font-size: 20px;
+  　}
+
+  a:link { color: blue; }
+  a:visited { color: purple; }
+  a:hover { color: skyblue; }
+  a:active { color: white; }
+
+  .gohome { border: 5px groove silver; }
+
+footer { text-align: right;
+         font-size: 20px;
+        }
