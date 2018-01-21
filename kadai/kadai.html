@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h1>2017年　都道府県別地震発生件数</h1>
+<div id="drawChartJishin" style="width: 1200px; padding: 0; margin: 0; border: 0;"></div>
+<script src="https://www.google.com/jsapi"></script>
+<script>
+google.load('visualization', '1', {'packages':['geochart']});
+google.setOnLoadCallback(graphChart);
+
+function graphChart() {
+  var data_Jishin = google.visualization.arrayToDataTable(
+[
+['都道府県', '発生件数'],
+['北海道', 184],
+['青森', 137],
+['岩手', 226],
+['宮城', 215],
+['秋田', 101],
+['山形', 53],
+['福島', 260],
+['茨城', 311],
+['栃木', 141],
+['群馬', 105],
+['埼玉', 95],
+['千葉', 159],
+['東京', 140],
+['神奈川', 70],
+['新潟', 37],
+['富山', 7],
+['石川', 12],
+['福井', 14],
+['山梨', 47],
+['長野', 177],
+['岐阜', 59],
+['静岡', 65],
+['愛知', 28],
+['三重', 10],
+['滋賀', 14],
+['京都', 17],
+['大阪', 18],
+['兵庫', 24],
+['奈良', 10],
+['和歌山', 56],
+['鳥取', 37],
+['島根', 18],
+['岡山', 17],
+['広島', 24],
+['山口', 18],
+['徳島', 24],
+['香川', 9],
+['愛媛', 37],
+['高知', 27],
+['福岡', 21],
+['佐賀', 19],
+['長崎', 40],
+['熊本', 265],
+['大分', 41],
+['宮崎', 65],
+['鹿児島', 227],
+['沖縄', 69]
+]
+  );
+ var option = {
+    region: 'JP',
+    resolution: 'provinces',
+    colorAxis: {colors: ['white', 'blue', '#00853f', 'black', 'yellow', '#e31b23']},
+    backgroundColor: '#81d4fa',
+    datalessRegionColor: '#f8bbd0',
+    defaultColor: '#f5f5f5'
+  };
+
+  var graph_Jishin = new google.visualization.GeoChart(document.getElementById('drawChartJishin'));
+  graph_Jishin.draw(data_Jishin, option);
+}
+</script>
+<p>2017年の震度１以上が計測された件数を都道府県別にマッピングを行った。<br>
+最大値を記録したのは「茨城県」<br>
+東北だけでなく、南に位置する鹿児島や熊本、沖縄も上位なのは意外だった。<br>
+近畿地方及び、中国・四国地方は比較的落ち着いた地域であることが分かる。<br>
+中でも、和歌山だけは56回と少し多い件数だが、隣県である奈良と三重は全国でも少ない件数を記録しているのはなぜ？<br>
+何年も前から言われ続けている関東大震災のことも考えると、中国・四国地方が安全なのだろうか<br><br>
+
+    参考:<a href=http://www.data.jma.go.jp/svd/eqdb/data/shindo/index.php>気象庁</a>
+
+</p>
+</body>
+</html>
