@@ -1,0 +1,87 @@
+/*
+.carousel{
+  height: 300px;
+  margin:auto;
+}
+*/
+
+.carousel .item {
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+/*以下が関係なし？・・・上のが優先されてる*/
+
+@carouselOption1 (min-width: 320px) {
+    .carousel,
+    .carousel .item,
+    .carousel .item-mask,
+    .carousel-inner .item .item-mask img {
+        height: 200px;
+    }
+}
+
+@carouselOption1 (min-width: 480px) {
+    .carousel,
+    .carousel .item,
+    .carousel .item-mask,
+    .carousel-inner .item .item-mask img {
+        height: 250px;
+    }
+}
+
+
+@carouselOption1 (min-width: 768px) {
+    .carousel,
+    .carousel .item,
+    .carousel .item-mask,
+    .carousel-inner .item .item-mask img {
+        height: 300px;
+    }
+
+    @carouselOption1 (min-width: 1200px) {
+        .carousel,
+        .carousel .item,
+        .carousel .item-mask,
+        .carousel-inner .item .item-mask img {
+            height: 350px;
+        }
+
+        @carouselOption2 (min-width: 320px) {
+            .carousel,
+            .carousel .item,
+            .carousel .item-mask,
+            .carousel-inner .item .item-mask img {
+                height: 200px;
+            }
+        }
+
+        @carouselOption2 (min-width: 480px) {
+            .carousel,
+            .carousel .item,
+            .carousel .item-mask,
+            .carousel-inner .item .item-mask img {
+                height: 250px;
+            }
+        }
+
+
+        @carouselOption2 (min-width: 768px) {
+            .carousel,
+            .carousel .item,
+            .carousel .item-mask,
+            .carousel-inner .item .item-mask img {
+                height: 300px;
+            }
+
+            @carouselOption2 (min-width: 1200px) {
+                .carousel,
+                .carousel .item,
+                .carousel .item-mask,
+                .carousel-inner .item .item-mask img {
+                    height: 350px;
+                }
+            }
